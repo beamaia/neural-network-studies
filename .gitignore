@@ -1,3 +1,4 @@
-.ipynotebooks
+.ipynb_checkpoints 
 __pycache__
-first_code/__pycache__
+first_code/__pycache_
+cat_vs_non_cat/.ipynb_checkpoints 
