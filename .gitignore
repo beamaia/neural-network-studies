@@ -1,3 +1,5 @@
 .ipynb_checkpoints 
 __pycache__
 simple_neural_network 
+cat_or_non_cat/datasets
+cifar-10-batches-py
