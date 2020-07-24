@@ -21,7 +21,7 @@ def train_model(model, data_loader, device):
         count = 0
  
         for images, labels in data_loader:
-            images.resize_([100,1,28,28]).to(device)
+            images.resize_([100,3,28,28]).to(device)
             labels.to(device)
 
             # Forward pass
@@ -46,5 +46,22 @@ def train_model(model, data_loader, device):
             learning_rate /= 3
             update_lr(optimizer, learning_rate)
 
-    return model 
+def test_model(model, data_loader, device):
+    model.eval()
+    model.to(device)
+    with torch.no_grad():
+        correct = 0
+        total = 0
+        for images, labels in data_loader:
+            images = images.resize_(100, 1, 32, 32).to(device)
+            labels = labels.to(device)
+            outputs = model(images)
+            _, predicted = torch.max(outputs.data, 1)
+            total += labels.size(0)
+            correct += (predicted == labels).sum().item()
 
+        accuracy = 100 * correct / total
+        print('Accuracy of the model on the test images: {.2f} %'.format(accuracy))
+
+      
+    return accuracy
