@@ -1,15 +1,19 @@
+updating_gitignore.sh
 .ipynb_checkpoints 
 __pycache__
 cat_or_non_cat/datasets
 cifar-10-batches-py
-coursera/1.1_1Dtensors_v2.ipynb
-coursera/1.1_2\ Two-Dimensional\ Tensors_v2.ipynb
-coursera/learning_tensors.ipynb
-coursera/.ipynb_checkpoints
-coursera/1.2derivativesandGraphsinPytorch_v2.ipynb
+coursera
 idc_regular_ps50_idx5
 BreaKHis_v1
 mnist
+k-nearest-neighbors
 intro_histopathology/best_model.h5
 intro_histopathology/SOB_B_A-14-22549AB-400-001.png
-intro_histopathology/check_gpu.py
+check_gpu.py
+pytorch_neural_network.ipynb
+intro_resnet/resnet_cifar10.ipynb
+intro_resnet/resnet_cifar10_v1.ckpt
+intro_resnet/resnet_from_scratch.py
+intro_resnet/testing_mnist_resnet.ipynb
+intro_resnet/tweaking_resnet_cifar10.ipynb

@@ -25,7 +25,7 @@ def create_TensorDataset(x_train, y_train, x_test, y_test):
     return train, test
 
 def create_DataLoader(train=None, test=None, batch_size=100):
-    if train is None and test is None:
+    if train is None or test is None:
         x_train, y_train, x_test, y_test = mnist_data()
         train, test = create_TensorDataset(x_train, y_train, x_test, y_test)
 
