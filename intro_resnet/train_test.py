@@ -35,8 +35,9 @@ def train_model(model, train_loader, num_epochs=80, learning_rate=0.001, device=
             loss.backward()
             optimizer.step()
             running_loss += loss.item()
+
             # print statistics
-            if (i + 1) % 1000 == 0 or i == 1428:    
+            if (i + 1) % 1000 == 0:    
                 print (f'Step [{i + 1}/{len(train_loader)}] Loss: {loss.item()}')
 
         if update_lr is True:
